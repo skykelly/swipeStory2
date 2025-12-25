@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swipe Story - TikTok Style</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="horizontal-container">
+        <!-- GHM Category -->
+        <div class="vertical-container" id="category-ghm">
+            <div class="card"><iframe src="html/GHM/1.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/GHM/2.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/GHM/3.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/GHM/4.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/GHM/5.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/GHM/6.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/GHM/7.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/GHM/8.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/GHM/9.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/GHM/10.html" frameborder="0"></iframe></div>
+        </div>
+
+        <!-- Japan Ads Category -->
+        <div class="vertical-container" id="category-japan">
+            <div class="card"><iframe src="html/japanAds/1.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/japanAds/2.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/japanAds/3.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/japanAds/4.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/japanAds/5.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/japanAds/6.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/japanAds/7.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/japanAds/8.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/japanAds/9.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/japanAds/10.html" frameborder="0"></iframe></div>
+        </div>
+
+        <!-- Movies Category -->
+        <div class="vertical-container" id="category-movies">
+            <div class="card"><iframe src="html/movies/1.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/movies/2.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/movies/3.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/movies/4.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/movies/5.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/movies/6.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/movies/7.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/movies/8.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/movies/9.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/movies/10.html" frameborder="0"></iframe></div>
+        </div>
+
+        <!-- Books Category -->
+        <div class="vertical-container" id="category-books">
+            <div class="card"><iframe src="html/books/1.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/books/2.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/books/3.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/books/4.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/books/5.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/books/6.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/books/7.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/books/8.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/books/9.html" frameborder="0"></iframe></div>
+            <div class="card"><iframe src="html/books/10.html" frameborder="0"></iframe></div>
+        </div>
+    </div>
+
+    <!-- Indicator Dots -->
+    <div class="category-indicator">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+
+    <script>
+        const horizontalContainer = document.querySelector('.horizontal-container');
+        const dots = document.querySelectorAll('.dot');
+
+        horizontalContainer.addEventListener('scroll', () => {
+            const index = Math.round(horizontalContainer.scrollLeft / window.innerWidth);
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        });
+    </script>
+</body>
+
+</html>
